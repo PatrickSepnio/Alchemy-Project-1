@@ -1,5 +1,5 @@
 iframe {
     border: none;
-    width: 63.5vw;
-    min-height: 72vh;
+    width: fit-content;
+    min-height: 73vh;
 }

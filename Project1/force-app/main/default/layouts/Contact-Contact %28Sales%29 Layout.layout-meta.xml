@@ -47,7 +47,7 @@
             </layoutItems>
             <layoutItems>
                 <behavior>Required</behavior>
-                <field>Twitter_Handler__c</field>
+                <field>Twitter_Handle__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
