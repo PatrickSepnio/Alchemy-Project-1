@@ -1,13 +1,25 @@
 {
-  "orgName": "Demo company",
-  "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
-  "settings": {
-    "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
+    "orgName": "Revo",
+    "edition": "Developer",
+    "features": ["EnableSetPasswordInApi"],
+    "hasSampleData": true,
+    "objectSettings": {
+        "case": {
+            "sharingModel": "readWrite"
+        }
     },
-    "mobileSettings": {
-      "enableS1EncryptedStoragePref2": false
+    "settings": {
+        "lightningExperienceSettings": {
+            "enableS1DesktopEnabled": true
+        },
+        "mobileSettings": {
+            "enableS1EncryptedStoragePref2": false
+        },
+        "securitySettings": {
+            "enableAdminLoginAsAnyUser": true,
+            "sessionSettings": {
+                "forceRelogin": false
+            }
+        }
     }
-  }
 }
