@@ -5,7 +5,7 @@
       "default": true
     }
   ],
-  "name": "Project1",
+  "name": "Unstable-Narwhal",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "52.0"
