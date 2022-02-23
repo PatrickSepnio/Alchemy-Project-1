@@ -9,7 +9,7 @@ export default class TwitterHandlerLwc extends LightningElement {
     @api recordId
 
     //default twitter handle 
-    twitterHandler = 'salesforceorg';
+    twitterHandler = '/salesforceorg';
     //getter to return full url for twitter feed, uses wire service data or default value above
     get fullUrl() {
         console.log(this.twitterHandler);
