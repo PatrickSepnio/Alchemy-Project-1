@@ -1,18 +1,19 @@
 import { LightningElement, api, wire } from 'lwc';
-//LDS service module to interact with records (decorate with @wire to invoke it's methods)
-import { getRecord } from 'lightning/uiRecordApi';
+import { getRecord } from 'lightning/uiRecordApi'; //LDS service module to interact with records (decorate with @wire to invoke it's methods)
 
+//set fields to interact with
 const FIELDS = ['Contact.Twitter_Handle__c']
 export default class TwitterHandlerLwc extends LightningElement {
 
-    //exposes recordId field as a public property
+    //expose recordId field as public property
     @api recordId
 
     //default twitter handle 
-    twitterHandler = '/salesforceorg';
-    //getter to return full url for twitter feed, uses wire service data or default value above
+    twitterHandler = 'salesforceorg';
+
+    //get full url for twitter feed, use data from wire service or default
     get fullUrl() {
-        console.log(this.twitterHandler);
+
         return `https://velocity-customization-5212-dev-ed--c.visualforce.com/apex/TwitterFeedPage?twitterHandle=${this.twitterHandler}`
     }
 
@@ -20,7 +21,7 @@ export default class TwitterHandlerLwc extends LightningElement {
     @wire(getRecord, { recordId: '$recordId', fields: FIELDS })
     wiredRecord({ error, data }) {
         if (data) {
-            this.twitterHandler = data.fields.Twitter_Handle__c.value //get records Twitter Handle value
+            this.twitterHandler = data.fields.Twitter_Handle__c.value //assign Twitter Handle value from Contact object
         }
         if (error) {
             console.error(error)
