@@ -1,14 +1,12 @@
 <apex:page lightningStylesheets="true" docType="HTML-5.0">
 	
-	<!-- @mention tweet button from developer.twitter.com -->
-    <a class="twitter-mention-button"
-      href="https://twitter.com/intent/tweet?screen_name=salesforceorg">Tweet @mention</a>
+	<!-- @mention tweet button (developer.twitter.com). Query PageReference object to retrieve twitterHandle string. -->
+    <a class="twitter-mention-button" href="{!'https://twitter.com/intent/tweet?screen_name='+ $CurrentPage.parameters.twitterHandle}">Tweet @mention</a>
 	
-	  <!-- twitter timeline anchor. Query PageReference object to retrieve a string in the current page URL.
-	     (we need the twitterHandle that was set in the javascript file) -->
+	<!-- twitter timeline anchor. Reference CurrentPage for twitterHandle -->
     <a class="twitter-timeline" href="{!'https://twitter.com/'+ $CurrentPage.parameters.twitterHandle}"></a>
 	
-	<!-- widgets.js to display Twitter timeline from developer.twitter.com -->			
+	<!-- widgets.js for Twitter timeline (developer.twitter.com) -->			
 	<script>window.twttr = (function(d, s, id) {
   	  var js, fjs = d.getElementsByTagName(s)[0], 
         t = window.twttr || {};
@@ -24,5 +22,5 @@
   	  return t;
 	  }(document, "script", "twitter-wjs"));
     </script>	
-	
+
 </apex:page>

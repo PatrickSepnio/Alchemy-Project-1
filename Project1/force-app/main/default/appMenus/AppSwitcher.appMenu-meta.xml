@@ -64,4 +64,12 @@
         <name>Revo</name>
         <type>Network</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>ccrz__CloudCraze</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
+    <appMenuItems>
+        <name>Revo22</name>
+        <type>Network</type>
+    </appMenuItems>
 </AppMenu>

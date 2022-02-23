@@ -1,6 +1,6 @@
 <template>
-    <lightning-card>
-        <!-- call getter for Twitter feed Url-->
+    <lightning-card  onload={twitterFeed}>
+        <!-- call javascript getter for twitter feed url-->
         <div class="slds-var-m-around_medium">
             <iframe src={fullUrl}></iframe>
         </div>
