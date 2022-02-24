@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NumberLeft__c</fullName>
+    <description>Shows how many of the product is left for sale</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How many more are left to sell?</inlineHelpText>
+    <label>NumberLeft</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
