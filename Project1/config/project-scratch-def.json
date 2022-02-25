@@ -1,13 +1,22 @@
 {
-  "orgName": "Demo company",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": [
+      "Entitlements",
+      "FieldAuditTrail",
+      "EnableSetPasswordInApi"
+  ],
+  "hasSampleData": true,
+  "objectSettings": {
+      "case": {
+          "sharingModel": "readWrite"
+      }
+  },
   "settings": {
-    "lightningExperienceSettings": {
-      "enableS1DesktopEnabled": true
-    },
-    "mobileSettings": {
-      "enableS1EncryptedStoragePref2": false
-    }
+      "securitySettings": {
+          "enableAdminLoginAsAnyUser": true,
+          "sessionSettings": {
+              "forceRelogin": false
+          }
+      }
   }
 }
