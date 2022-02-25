@@ -4,28 +4,23 @@
 
 <types>
 <members>Product2</members>
-<members>Customer_Order__c</members>
 <name>CustomObject</name>
 </types>
 
 <types>
 <members>productsLeft</members>
-  <members>orderSearchForm</members>
 <name>LightningComponentBundle</name>
 </types>
 
 <types>
 <members>Products</members>
-<members>UpdateCustomerOrder</members>
-<members>OrderSearch</members>
-<members>UpdateTriggerHelper</members>
-<members>OrderSearchTest</members>
-<members>UpdateCustomerOrderTest</members>
+<members>ProductsLeftTest</members>
+<members>Product2TriggerTest</members>
 <name>ApexClass</name>
 </types>
 
 <types>
-    <members>UpdateCustomerOrderTrigger</members>
+    <members>Product2Trigger</members>
     <name>ApexTrigger</name>
 </types>
 
