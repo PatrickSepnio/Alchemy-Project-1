@@ -11,10 +11,10 @@ export default class TwitterHandlerLwc extends LightningElement {
     //expose recordId field as public property
     @api recordId
     //assign a default company value for experience cloud site or users with no Twitter handle
-    twitterHandler = 'salesforce2022';
+    twitterHandler = 'salesforceorg';
     //get url for twitter feed, use twitterHandle from wire service or default
     get fullUrl() {
-
+        console.log(this.twitterHandler)
         return `https://wise-hawk-gpqvd0-dev-ed--c.visualforce.com/apex/TwitterFeedPage?twitterHandle=${this.twitterHandler}`
     }
 
