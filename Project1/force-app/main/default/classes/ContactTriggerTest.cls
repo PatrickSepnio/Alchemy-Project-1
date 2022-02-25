@@ -14,8 +14,10 @@ public with sharing class ContactTriggerTest {
         Test.startTest();
         insert newContacts;                               
         Test.stopTest();
-        // Verify that 200 new Contact were inserted and flow added default Twitter Handle value
-        List<Contact> verifyCons = [SELECT Twitter_Handle__c FROM Contact];
- 	    System.assertEquals('salesforceorg', verifyCons[0].Twitter_Handle__c);        
+        // Verify that 200 new Contact were inserted 
+        List<Contact> verifyCons = [SELECT Id FROM Contact];
+        System.assertEquals(200, verifyCons.size()); 
+        //Also verify flow added default Twitter Handle value       
+ 	    System.assertEquals('salesforce2022', verifyCons[0].Twitter_Handle__c);        
      }
 }

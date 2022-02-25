@@ -1,11 +1,15 @@
-public class ContactTriggerHandler {
-    
-   public static void CreateContacts(List<Contact> cons) {
-       
-        for (Contact con : cons) {
-            if(con.Twitter_Handle__c == null) {
-               con.Twitter_Handle__c = con.Twitter_Handle__c;
-            }
-        }
+public with sharing class ContactTriggerHandler {
+
+   public static void CreateNewContacts(List<Contact> cons) {
+
+       List<Contact> conList = new List<Contact>();
+       for (Contact c : cons) {
+           Contact con = new Contact();
+           con.LastName = c.LastName + ' Contact';
+           conList.add(con);
+       }
+       if (conList.size() > 0) {
+           insert conList;
+       }
    }
 }
