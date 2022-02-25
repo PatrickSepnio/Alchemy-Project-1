@@ -22,5 +22,5 @@
   	  return t;
 	  }(document, "script", "twitter-wjs"));
     </script>	
-
+	
 </apex:page>

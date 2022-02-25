@@ -1,5 +1,5 @@
 iframe {
     border: none;
-    width: 46.5vw;
-    min-height: 73vh;
+    width: 100%;
+    height: 100%;
 }
