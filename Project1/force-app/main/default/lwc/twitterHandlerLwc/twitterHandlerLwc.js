@@ -14,7 +14,7 @@ export default class TwitterHandlerLwc extends LightningElement {
     twitterHandler = 'salesforceorg';
     //get url for twitter feed, use twitterHandle from wire service or default
     get fullUrl() {
-        console.log(this.twitterHandler)
+
         return `https://wise-hawk-gpqvd0-dev-ed--c.visualforce.com/apex/TwitterFeedPage?twitterHandle=${this.twitterHandler}`
     }
 
@@ -25,6 +25,7 @@ export default class TwitterHandlerLwc extends LightningElement {
             this.twitterHandler = data.fields.Twitter_Handle__c.value //assign Twitter Handle field value from Contact object
         }
         if (error) {
+            this.twitterHandler = 'salesforceorg'
             console.error(error)
         }
     }
