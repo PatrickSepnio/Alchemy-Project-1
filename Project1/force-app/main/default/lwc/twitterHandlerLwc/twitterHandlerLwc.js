@@ -15,11 +15,10 @@ export default class TwitterHandlerLwc extends LightningElement {
     //get url for twitter feed, use twitterHandle from wire service or default
     get fullUrl() {
 
-        return `https://velocity-customization-5212-dev-ed--c.visualforce.com/apex/TwitterFeedPage?twitterHandle=${this.twitterHandler}`
+        return `https://wise-hawk-gpqvd0-dev-ed--c.visualforce.com/apex/TwitterFeedPage?twitterHandle=${this.twitterHandler}`
     }
 
     //use wire adapter to invoke 'getRecord' and assign Twitter Handle value from the users Contact record
-    method
     @wire(getRecord, { recordId: '$recordId', fields: TWIITTER_HANDLE })
     wiredRecord({ error, data }) {
         if (data) {
