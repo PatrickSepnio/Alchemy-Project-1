@@ -11,10 +11,12 @@ export default class TwitterHandlerLwc extends LightningElement {
     //expose recordId field as public property
     @api recordId
     //assign a default company value for experience cloud site or users with no Twitter handle
-    twitterHandler = 'salesforceorg';
+    twitterHandler;
     //get url for twitter feed, use twitterHandle from wire service or default
     get fullUrl() {
-
+        if (this.twitterHandler == null) {
+            this.twitterHandler = 'salesforceorg';
+        }
         return `https://wise-hawk-gpqvd0-dev-ed--c.visualforce.com/apex/TwitterFeedPage?twitterHandle=${this.twitterHandler}`
     }
 
@@ -28,5 +30,21 @@ export default class TwitterHandlerLwc extends LightningElement {
             this.twitterHandler = 'salesforceorg'
             console.error(error)
         }
+    }
+
+    firstName = '';
+    lastName = '';
+
+    handleChange(event) {
+        const field = event.target.name;
+        if (field === 'firstName') {
+            this.firstName = event.target.value;
+        } else if (field === 'lastName') {
+            this.lastName = event.target.value;
+        }
+    }
+
+    get uppercasedFullName() {
+        return `${this.firstName} ${this.lastName}`.toUpperCase();
     }
 }
